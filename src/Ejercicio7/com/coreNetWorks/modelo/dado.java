@@ -3,11 +3,12 @@ package Ejercicio7.com.coreNetWorks.modelo;
 import java.util.Random;
 
 public class dado {
+
     //1.atributos
     private int dado;
     //metodos
     Random numeroAleatorio = new Random();
-    private  String ObtenerImagen(int numeroAleatorio) {
+    public  String lanzar(int numeroAleatorio) {
         switch (numeroAleatorio) {
             case 1:
                 return dibujarUno();
@@ -42,17 +43,17 @@ public class dado {
         return "x x x" ;
     }
     public String dibujarCuatro(){
-        return "x x"+"/n"+"xx" ;
+        return "x x\nx x" ;
     }
     public String dibujarCinco(){
-        return "x x\"+ '\\'' +\" x\"+ '\\'' +\" x x" ;
+        return "x x\n x\nx x" ;
     }
     public String dibujarSeis(){
-        return "x x x"+ '\'' +" x x x" ;
+        return "x x x\nx x x" ;
     }
 
         public void setDado() {
-        this.dado = numeroAleatorio.nextInt(1,6);
+        this.dado = numeroAleatorio.nextInt(1,7);
     }
 
     //constructores
